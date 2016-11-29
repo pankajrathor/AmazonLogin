@@ -13,6 +13,11 @@
 		2B7793311DE723CC003767BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B77932F1DE723CC003767BA /* Main.storyboard */; };
 		2B7793331DE723CC003767BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7793321DE723CC003767BA /* Assets.xcassets */; };
 		2B7793361DE723CC003767BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7793341DE723CC003767BA /* LaunchScreen.storyboard */; };
+		2B7793411DE72478003767BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7793401DE72478003767BA /* Security.framework */; };
+		2B7793431DE72484003767BA /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7793421DE72484003767BA /* SafariServices.framework */; };
+		2B7793451DE72497003767BA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7793441DE72497003767BA /* CoreGraphics.framework */; };
+		2B7793471DE72530003767BA /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7793461DE72530003767BA /* LoginWithAmazon.framework */; };
+		2B77934C1DEC575D003767BA /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B77934B1DEC575D003767BA /* BaseService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,13 @@
 		2B7793321DE723CC003767BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B7793351DE723CC003767BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B7793371DE723CC003767BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B7793401DE72478003767BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2B7793421DE72484003767BA /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		2B7793441DE72497003767BA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2B7793461DE72530003767BA /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoginWithAmazon.framework; path = AmazonLogin/Frameworks/LoginWithAmazon.framework; sourceTree = "<group>"; };
+		2B7793481DE734A4003767BA /* AmazonLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AmazonLogin.entitlements; sourceTree = "<group>"; };
+		2B77934A1DEC575D003767BA /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseService.h; path = WebServices/BaseService.h; sourceTree = "<group>"; };
+		2B77934B1DEC575D003767BA /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseService.m; path = WebServices/BaseService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7793471DE72530003767BA /* LoginWithAmazon.framework in Frameworks */,
+				2B7793451DE72497003767BA /* CoreGraphics.framework in Frameworks */,
+				2B7793431DE72484003767BA /* SafariServices.framework in Frameworks */,
+				2B7793411DE72478003767BA /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				2B7793251DE723CC003767BA /* AmazonLogin */,
+				2B77933D1DE7242A003767BA /* Frameworks */,
 				2B7793241DE723CC003767BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,6 +75,8 @@
 		2B7793251DE723CC003767BA /* AmazonLogin */ = {
 			isa = PBXGroup;
 			children = (
+				2B7793491DEC5738003767BA /* WebServices */,
+				2B7793481DE734A4003767BA /* AmazonLogin.entitlements */,
 				2B7793291DE723CC003767BA /* AppDelegate.h */,
 				2B77932A1DE723CC003767BA /* AppDelegate.m */,
 				2B77932C1DE723CC003767BA /* ViewController.h */,
@@ -77,6 +96,26 @@
 				2B7793271DE723CC003767BA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B77933D1DE7242A003767BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B7793461DE72530003767BA /* LoginWithAmazon.framework */,
+				2B7793441DE72497003767BA /* CoreGraphics.framework */,
+				2B7793421DE72484003767BA /* SafariServices.framework */,
+				2B7793401DE72478003767BA /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B7793491DEC5738003767BA /* WebServices */ = {
+			isa = PBXGroup;
+			children = (
+				2B77934A1DEC575D003767BA /* BaseService.h */,
+				2B77934B1DEC575D003767BA /* BaseService.m */,
+			);
+			name = WebServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +151,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = SM5ANP3F3W;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -151,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B77934C1DEC575D003767BA /* BaseService.m in Sources */,
 				2B77932E1DE723CC003767BA /* ViewController.m in Sources */,
 				2B77932B1DE723CC003767BA /* AppDelegate.m in Sources */,
 				2B7793281DE723CC003767BA /* main.m in Sources */,
@@ -219,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -261,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -273,7 +318,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AmazonLogin/AmazonLogin.entitlements;
 				DEVELOPMENT_TEAM = SM5ANP3F3W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AmazonLogin/Frameworks",
+				);
 				INFOPLIST_FILE = AmazonLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sogeti.AmazonLogin;
@@ -285,7 +335,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AmazonLogin/AmazonLogin.entitlements;
 				DEVELOPMENT_TEAM = SM5ANP3F3W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AmazonLogin/Frameworks",
+				);
 				INFOPLIST_FILE = AmazonLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sogeti.AmazonLogin;
